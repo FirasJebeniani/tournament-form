@@ -1,7 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/tournament-form/browser",
-  "rewrites": [
+  "routes": [
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
