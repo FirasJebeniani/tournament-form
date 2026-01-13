@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "interface": {
+    "tounament-form": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
