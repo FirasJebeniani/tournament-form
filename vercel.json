@@ -3,7 +3,7 @@
   "outputDirectory": "dist/tournament-form/browser",
   "routes": [
     {
-      "src": "/(.*\\.(js|css|png|jpg|svg|ico|json|txt))",
+      "src": "/(.*\\.(js|css|png|jpg|svg|ico|json|txt|webp))",
       "dest": "/$1"
     },
     {
