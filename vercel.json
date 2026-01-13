@@ -1,5 +1,14 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/tournament-form/browser",
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*\\.(js|css|png|jpg|svg|ico|json|txt))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
