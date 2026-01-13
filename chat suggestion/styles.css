@@ -1,0 +1,120 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #c6d8fd;
+    color: #E5E7EB;
+    height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 70px;
+    background: linear-gradient(90deg, #0F1C3F, #1E3A8A);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 2px solid #C89B3C;
+}
+
+.navbar h1 {
+    color: #C89B3C;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    position: relative;
+    display: flex;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+/* LEFT SECTION */
+.left-section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+
+    clip-path: polygon(0 0, 85% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+
+    background-image: url("lol1.webp");
+    background-size: cover;
+    /* fills height */
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+/*.left-section img {
+    object-fit: contain;
+    
+    height: 100%;
+    width: 100%;
+    
+    display: block;
+}*/
+
+
+/* RIGHT SECTION */
+.right-section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+}
+
+/* FORM CARD */
+.form-card {
+    width: 100%;
+    /*background: linear-gradient(180deg, #0F1C3F, #0A1428);*/
+    padding: 30px;
+}
+
+.form-card h2 {
+    color: #C89B3C;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* INPUTS */
+.form-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #0A1428;
+    border: 1px solid #1E3A8A;
+    border-radius: 8px;
+    color: #E5E7EB;
+}
+
+.form-card input::placeholder {
+    color: #9CA3AF;
+}
+
+/* BUTTON */
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #C89B3C;
+    border: none;
+    border-radius: 8px;
+    color: #0A1428;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-card button:hover {
+    background-color: #E0B84C;
+}

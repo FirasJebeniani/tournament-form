@@ -1,0 +1,54 @@
+app-nav-bar {
+    height: 70px;
+    background: linear-gradient(90deg, #0F1C3F, #1E3A8A);
+    display: flex;
+    
+    padding: 0 40px;
+    border-bottom: 2px solid #C89B3C;
+    
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        
+}
+.main-container {
+    position: relative;
+    display: flex;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+.left-section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    clip-path: polygon(0 0, 85% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+    background-image: url("/assets/lol1.webp");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.right-section {
+    width: 60%;
+    /*display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;*/
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.right-section h1 {
+    color: #C89B3C;
+    font-weight: 600;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.8px #0A1428;
+    text-shadow:
+        0 0 6px rgba(86, 65, 20, 0.6);
+}
+app-form-container {
+    width: 100%;
+    /*background: linear-gradient(180deg, #0F1C3F, #0A1428);*/
+    padding: 30px;
+    
+}

@@ -1,0 +1,45 @@
+
+
+/* Left logo */
+.main-logo {
+    width: 5%;
+    cursor: pointer;
+}
+.navbar-left{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Right button */
+.navbar-right{
+    width:15%;
+}
+.about-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: none;
+
+    background-color: #c8b40800;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.about-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    height: 25px;
+    width: 25px;
+}
