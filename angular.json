@@ -1,13 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm",
-    "analytics": "9011775f-b4e7-4a20-bd22-870c71a2b117"
-  },
-  "newProjectRoot": "projects",
   "projects": {
-    "tounament-form": {
+    "tournament-form": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -25,7 +20,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-      
               }
             ],
             "styles": [
@@ -46,7 +40,7 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "options": {
-            "buildTarget": "interface:build"
+            "buildTarget": "tournament-form:build"
           }
         }
       }
