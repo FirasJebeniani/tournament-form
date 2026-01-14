@@ -14,9 +14,22 @@ import { NgIf } from '@angular/common';
 export class FormContainer {
   submitted = false;
   googleScriptURL =
-    'https://script.google.com/macros/s/AKfycbyjYr_g6dODSksFP_KrppTm53AYzN1rYgeIeFh8RvVeTq1npGM0KItccwUr57bpdAlH/exec';
+    'https://script.google.com/macros/s/AKfycbwcQanknGJuELjil8OZ5S00PsrVFc5Fi08co8TNeGEApdJDzpFuVNW8CzkU4U7_puAukA/exec';
 
   constructor(private http: HttpClient) { }
+  currentStep = 1;
+
+  nextStep(registration: NgForm) {
+    if (registration.invalid) {
+      registration.control.markAllAsTouched();
+      return;
+    }
+    this.currentStep++;
+  }
+
+  prevStep() {
+    this.currentStep--;
+  }
   submit(registration: NgForm) {
     if (registration.invalid) {
       registration.control.markAllAsTouched();
@@ -36,11 +49,10 @@ export class FormContainer {
         this.submitted = true;
       },
       error: (error) => {
-        // NOTE: Even with a successful save, you might see a "HttpErrorResponse"
-        // if Google returns a redirect that HttpClient can't parse as JSON.
+        
         console.error('Error!', error);
 
-        // If your script definitely ran, you can still treat this as success
+        
         if (error.status === 200 || error.status === 0) {
           this.submitted = true;
           registration.resetForm();

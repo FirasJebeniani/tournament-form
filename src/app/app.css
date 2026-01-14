@@ -30,12 +30,13 @@ app-nav-bar {
     background-repeat: no-repeat;
 }
 .right-section {
-    width: 60%;
+    width: 30%;
     /*display: flex;
     align-items: flex-start;
     justify-content: flex-start;*/
     position: absolute;
-    right: 0;
+    right: 12%;
+    top: 5%;
     text-align: center;
 }
 .right-section h1 {
@@ -50,5 +51,9 @@ app-form-container {
     width: 100%;
     /*background: linear-gradient(180deg, #0F1C3F, #0A1428);*/
     padding: 30px;
-    
+    max-height: 100vh;
+    /* never exceed screen height */
+    overflow-y: auto;
+    /* enable vertical scroll */
+    padding: 1rem;
 }
