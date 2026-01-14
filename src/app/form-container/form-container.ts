@@ -14,7 +14,7 @@ import { NgIf } from '@angular/common';
 export class FormContainer {
   submitted = false;
   googleScriptURL =
-    'https://script.google.com/macros/s/AKfycbwcQanknGJuELjil8OZ5S00PsrVFc5Fi08co8TNeGEApdJDzpFuVNW8CzkU4U7_puAukA/exec';
+    'https://script.google.com/macros/s/AKfycbz4KCGTHc5AFGkysy1EmbXZ_6Vm3NtyypEXLF7QgCZk9MfTA4-4g15ImYdAi9zKEj_l/exec';
 
   constructor(private http: HttpClient) { }
   currentStep = 1;
