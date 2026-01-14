@@ -1,37 +1,36 @@
 <div class="tournament-container">
-    <h1 class="main-title">League Of Legends<br>Tournament</h1>
 
     <form *ngIf="!submitted" #registration="ngForm" (ngSubmit)="submit(registration)">
         
-        <div class="field">
+        <div class="field animate-line">
             <input type="text" placeholder="Team Name" name="teamName" required ngModel #tName="ngModel" />
         </div>
 
-        <h2 class="section-title">Team Leader</h2>
+        <h2 class="section-title animate-line">Team Leader</h2>
 
-        <div class="field">
+        <div class="field animate-line">
             <input type="text" placeholder="Full Name" name="leaderName" required ngModel #name1="ngModel" />
             <div class="alert" *ngIf="(name1.touched || registration.submitted) && name1.invalid">
                 Name is required
             </div>
         </div>
 
-        <div class="field">
+        <div class="field animate-line">
             <input type="email" placeholder="Email" name="leaderEmail" required email ngModel />
         </div>
 
-        <div class="field">
+        <div class="field animate-line">
             <input type="text" placeholder="Facebook Link" name="leaderFacebook" ngModel />
         </div>
 
-        <div class="field">
+        <div class="field animate-line">
             <input type="text" placeholder="LoL Account Name" name="leaderAccount" required ngModel #account="ngModel" />
             <div class="alert" *ngIf="(account.touched || registration.submitted) && account.invalid">
                 Account name is required
             </div>
         </div>
 
-        <button type="submit" class="gold-button" [disabled]="registration.invalid">
+        <button type="submit" class="gold-button animate-line" [disabled]="registration.invalid">
             Register
         </button>
     </form>
