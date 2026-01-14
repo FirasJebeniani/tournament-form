@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-form-container',
@@ -13,7 +14,7 @@ import { NgIf } from '@angular/common';
 })
 export class FormContainer {
   submitted = false;
-  googleScriptURL = 'https://script.google.com/macros/s/AKfycbzhCp9FG6_myCSMqsOsRi74QbHs8YyvWbVJfz2hiXvxWBUGznH8hB5wnFiadj-imisw/exec';
+  googleScriptURL = environment.googleScriptURL;
 
   constructor(private http: HttpClient) { }
 
