@@ -1,96 +1,43 @@
-<form 
-    *ngIf="!submitted"
-    #registration="ngForm"
-    (ngSubmit)="submit(registration)">
+<div class="tournament-container">
+    <h1 class="main-title">League Of Legends<br>Tournament</h1>
 
-    <!-- Team name -->
-    <div *ngIf="currentStep === 1">
-        <input class=" animate-line" type="text" placeholder="Team Name" name="teamName" required ngModel />
+    <form *ngIf="!submitted" #registration="ngForm" (ngSubmit)="submit(registration)">
         
-        <h2 class="animate-line ">Team Leader</h2>
-        
-        <div class=" animate-line">
-        
-            <!-- Full name -->
-            <div class="field">
-                <input #name1="ngModel" type="text" placeholder="Full Name" name="leaderName" required ngModel />
-                <div class="alert" *ngIf="(name1.touched || registration.submitted) && name1.invalid">
-                    Name is required
-                </div>
-            </div>
-        
-            <!-- Email -->
-            <div class="field">
-                <input #email1="ngModel" type="email" placeholder="Email" name="leaderEmail" required email ngModel />
-                <div class="alert" *ngIf="(email1.touched || registration.submitted) && email1.invalid">
-                    Valid email is required
-                </div>
-            </div>
-        
-            <!-- Facebook -->
-            <div class="field">
-                <input type="text" placeholder="Facebook Link" name="leaderFacebook" ngModel />
-            </div>
-        
-        
-            <!-- Account -->
-            <div class="field">
-                <input #account="ngModel" type="text" placeholder="LoL Account Name" name="leaderAccount" required ngModel />
-                <div class="alert" *ngIf="(account.touched || registration.submitted) && account.invalid">
-                    Account name is required
-                </div>
-            </div>
-        
+        <div class="field">
+            <input type="text" placeholder="Team Name" name="teamName" required ngModel #tName="ngModel" />
         </div>
-        <button type="button" class="animate-line" (click)="nextStep(registration)">
-            Next
+
+        <h2 class="section-title">Team Leader</h2>
+
+        <div class="field">
+            <input type="text" placeholder="Full Name" name="leaderName" required ngModel #name1="ngModel" />
+            <div class="alert" *ngIf="(name1.touched || registration.submitted) && name1.invalid">
+                Name is required
+            </div>
+        </div>
+
+        <div class="field">
+            <input type="email" placeholder="Email" name="leaderEmail" required email ngModel />
+        </div>
+
+        <div class="field">
+            <input type="text" placeholder="Facebook Link" name="leaderFacebook" ngModel />
+        </div>
+
+        <div class="field">
+            <input type="text" placeholder="LoL Account Name" name="leaderAccount" required ngModel #account="ngModel" />
+            <div class="alert" *ngIf="(account.touched || registration.submitted) && account.invalid">
+                Account name is required
+            </div>
+        </div>
+
+        <button type="submit" class="gold-button" [disabled]="registration.invalid">
+            Register
         </button>
-    </div>
-    
+    </form>
 
-    <!-- Other members (optional – no validation) -->
-    <div *ngIf="currentStep === 2">
-        <h2 class="animate-line ">Other members</h2>
-        <div class="row animate-line">
-            <input type="text" placeholder="Full Name" name="member2Name" ngModel />
-            <input type="email" placeholder="Email" name="member2Email" ngModel />
-            <input type="text" placeholder="LoL Account Name" name="member2Account" ngModel />
-        </div>
-        
-        
-        <div class="row animate-line">
-            <input type="text" placeholder="Full Name" name="member3Name" ngModel />
-            <input type="email" placeholder="Email" name="member3Email" ngModel />
-            <input type="text" placeholder="LoL Account Name" name="member3Account" ngModel />
-        </div>
-        
-        
-        <div class="row animate-line">
-            <input type="text" placeholder="Full Name" name="member4Name" ngModel />
-            <input type="email" placeholder="Email" name="member4Email" ngModel />
-            <input type="text" placeholder="LoL Account Name" name="member4Account" ngModel />
-        </div>
-        
-        
-        <div class="row animate-line">
-            <input type="text" placeholder="Full Name" name="member5Name" ngModel />
-            <input type="email" placeholder="Email" name="member5Email" ngModel />
-            <input type="text" placeholder="LoL Account Name" name="member5Account" ngModel />
-        </div>
-        <div class="btn animate-line">
-            <button type="button" (click)="prevStep()">Back</button>
-            <button type="submit" [disabled]="registration.invalid">
-                Register
-            </button>
-        </div>
-        
+    <div *ngIf="submitted" class="success-message">
+        <h2>Registration Successful!</h2>
+        <p>Your team has been registered.</p>
     </div>
-    
-
-</form>
-<div *ngIf="submitted" class="success-message">
-    <h2>Registration Successful!</h2>
-    <p>Your team has been registered successfully.</p>
-    <p>We will contact the team leader soon.</p>
 </div>
-
